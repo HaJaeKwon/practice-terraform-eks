@@ -1,0 +1,6 @@
+ap-northeast-2/demo-eks/.terraform
+.idea
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+ap-northeast-2/demo-eks/secret.tfvars
