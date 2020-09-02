@@ -22,3 +22,11 @@ data "template_file" "kube_config" {
     CLUSTER_NAME = var.cluster_name
   }
 }
+
+data "template_file" "aws_auth" {
+  template = file("${path.module}/templates/aws_auth.yaml.tpl")
+
+  vars = {
+    rolearn = aws_iam_role.eks_worker.arn
+  }
+}
